@@ -30,7 +30,7 @@ public class ExtentReportUtil {
     private ExtentReports getReports(Theme theme,String documentTitle,String reportName){
         try {
             String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-            file = new File(IPath.DIRECTORY_PATH+"reports\\report_"+dateName+".html");
+            file = new File(IPath.RESOURCES_PATH+"assets\\reports\\report_"+dateName+".html");
             spark = new ExtentSparkReporter(file);
             if(extentReports == null) {
                 extentReports = new ExtentReports();
@@ -81,7 +81,7 @@ public class ExtentReportUtil {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         //after execution, you could see a folder "ScreenshotsReports" under src folder
-        String destination = IPath.DIRECTORY_PATH+"ScreenshotsReports\\"+screenshotName+"_"+dateName+".png";
+        String destination = IPath.RESOURCES_PATH+"assets\\ScreenshotsReports\\"+screenshotName+"_"+dateName+".png";
         File finalDestination = new File(destination);
         FileUtils.copyFile(source, finalDestination);
         return destination;

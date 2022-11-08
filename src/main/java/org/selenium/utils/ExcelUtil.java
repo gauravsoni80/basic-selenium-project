@@ -21,7 +21,7 @@ public class ExcelUtil {
         Object[][] data = null;
 
         try {
-            file = new File(IPath.RESOURCES_PATH+"excel\\" + excelFileName);
+            file = new File(IPath.RESOURCES_PATH+"assets\\excel\\" + excelFileName);
             fis = new FileInputStream(file);
             workbook = new XSSFWorkbook(fis);
             sheet = workbook.getSheet(sheetName);
@@ -50,7 +50,7 @@ public class ExcelUtil {
     public static Map<Object, Object> readAllData(String sheetName, String excelFileName) {
 
         try {
-            file = new File(IPath.RESOURCES_PATH+"excel\\" + excelFileName);
+            file = new File(IPath.RESOURCES_PATH+"assets\\excel\\" + excelFileName);
             fis = new FileInputStream(file);
             workbook = new XSSFWorkbook(fis);
             sheet = workbook.getSheet(sheetName);
