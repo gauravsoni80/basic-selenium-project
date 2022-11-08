@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-    <test thread-count="2" verbose="2" preserve-order="true" name="Application">
+    <test thread-count="1" verbose="1" preserve-order="true" name="Application">
         <classes>
             <class name="org.selenium.FacebookApplication">
                 <methods>
